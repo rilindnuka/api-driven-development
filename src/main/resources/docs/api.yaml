@@ -1,0 +1,117 @@
+openapi: 3.0.0
+
+info:
+  version: 0.0.1
+  title: Library API
+  description: The library service api
+
+tags:
+  - name: "Library"
+  - name: "Vehicle"
+
+
+paths:
+
+  /library/books:
+    get:
+      summary: This is summary
+      tags:
+        - "Library"
+      description: This is a description
+      operationId: getAllBooksInLibrary
+      responses:
+        "200":
+          description: This means its ok
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Book'
+  /library/book:
+    get:
+      summary: This is Book
+      tags:
+        - "Library"
+      description: This is a Book description
+      operationId: getSingleBook
+      responses:
+        "200":
+          description: This means its ok
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Book'
+
+  /vehicle/vehicles:
+    get:
+      summary: This is a list of vehicles
+      tags:
+        - "Vehicle"
+      description: This is a description of the endpoint
+      operationId: getAllVehicles
+      responses:
+        "200":
+          description: This means its ok
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Vehicle'
+  /vehicle/vehicle:
+    get:
+      summary: This is Vehicle object
+      tags:
+        - "Vehicle"
+      description: This is a description of the endpoint
+      operationId: getSingleVehicle
+      responses:
+        "200":
+          description: This means its ok
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Vehicle'
+    post:
+      summary: Create new Vehicle.
+      operationId: createVehicle
+      tags:
+        - "Vehicle"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Vehicle"
+      responses:
+        '201':
+          description: Returns created Vehicle.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Vehicle"
+components:
+
+  schemas:
+
+    Book:
+      description: This is the book model
+      type: object
+      properties:
+        name:
+          description: The name of book
+          type: string
+        bookAuthor:
+          description: name of author
+          type: string
+    Vehicle:
+      description: This is the car model
+      type: object
+      properties:
+        model:
+          description: The model of the car
+          type: string
+        make:
+          description: The make of the car
+          type: string
