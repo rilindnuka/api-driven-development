@@ -67,9 +67,9 @@
                             <language>spring</language>
                             <output>${project.build.directory}/generated-sources/</output>
                             <generateSupportingFiles>false</generateSupportingFiles>
-                            <apiPackage>com.rilind.api</apiPackage>
-                            <modelPackage>com.rilind.models</modelPackage>
-                            <invokerPackage>com.rilind.api.client</invokerPackage>
+                            <apiPackage>com.rilind.apidrivendevelopment.api</apiPackage>
+                            <modelPackage>com.rilind.apidrivendevelopment.models</modelPackage>
+                            <invokerPackage>com.rilind.apidrivendevelopment.api.client</invokerPackage>
                             <configOptions>
                                 <interfaceOnly>true</interfaceOnly>
                             </configOptions>
