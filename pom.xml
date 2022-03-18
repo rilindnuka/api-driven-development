@@ -70,6 +70,7 @@
                             <apiPackage>com.rilind.apidrivendevelopment.api</apiPackage>
                             <modelPackage>com.rilind.apidrivendevelopment.models</modelPackage>
                             <invokerPackage>com.rilind.apidrivendevelopment.api.client</invokerPackage>
+                            <modelNameSuffix>Dto</modelNameSuffix>
                             <configOptions>
                                 <interfaceOnly>true</interfaceOnly>
                             </configOptions>

@@ -2,7 +2,7 @@ package com.rilind.apidrivendevelopment.controllers;
 
 
 import com.rilind.apidrivendevelopment.api.VehicleApi;
-import com.rilind.apidrivendevelopment.models.Vehicle;
+import com.rilind.apidrivendevelopment.models.VehicleDto;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
@@ -15,33 +15,33 @@ import java.util.List;
 public class VehicleController implements VehicleApi {
     private static final Logger LOGGER = LoggerFactory.getLogger(VehicleController.class);
 
-    private List<Vehicle> getVehicles() {
-        Vehicle tesla = new Vehicle();
+    private List<VehicleDto> getVehicles() {
+        VehicleDto tesla = new VehicleDto();
         tesla.setMake("Tesla");
         tesla.setModel("Model S");
-        Vehicle lambo = new Vehicle();
+        VehicleDto lambo = new VehicleDto();
         lambo.setMake("Lamborghini");
         lambo.setModel("Aventador");
-        ArrayList<Vehicle> list = new ArrayList<>();
+        ArrayList<VehicleDto> list = new ArrayList<>();
         list.add(tesla);
         list.add(lambo);
         return list;
     }
 
     @Override
-    public ResponseEntity<Vehicle> createVehicle(Vehicle body) {
+    public ResponseEntity<VehicleDto> createVehicle(VehicleDto body) {
         LOGGER.info("Creating a Vehicle - endpoint");
         return ResponseEntity.ok(body);
     }
 
     @Override
-    public ResponseEntity<List<Vehicle>> getAllVehicles() {
+    public ResponseEntity<List<VehicleDto>> getAllVehicles() {
         LOGGER.info("Returning a a list with vehicles - endpoint");
         return ResponseEntity.ok(getVehicles());
     }
 
     @Override
-    public ResponseEntity<Vehicle> getSingleVehicle() {
+    public ResponseEntity<VehicleDto> getSingleVehicle() {
         LOGGER.info("Returning a single vehicle - endpoint");
         return ResponseEntity.ok(getVehicles().get(0));
     }

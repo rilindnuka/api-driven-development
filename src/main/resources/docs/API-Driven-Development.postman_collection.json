@@ -1,0 +1,113 @@
+{
+	"info": {
+		"_postman_id": "ae526194-ba37-485c-bf6b-10b4e14b1393",
+		"name": "API-Driven-Development",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET Books",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/library/books",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"library",
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Book",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/library/book",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"library",
+						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Vehicles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/vehicle/vehicles",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"vehicle",
+						"vehicles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Vehicle",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/vehicle/vehicle",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"vehicle",
+						"vehicle"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Vehicle",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/vehicle/vehicle",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"vehicle",
+						"vehicle"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
