@@ -45,6 +45,7 @@
             <groupId>javax.validation</groupId>
             <artifactId>validation-api</artifactId>
         </dependency>
+
     </dependencies>
 
     <build>
@@ -65,11 +66,13 @@
                         <configuration>
                             <inputSpec>${project.basedir}/src/main/resources/docs/api.yaml</inputSpec>
                             <language>spring</language>
-                            <output>${project.build.directory}/generated-sources/</output>
+                            <output>${project.basedir}/src/main/java/com/rilind/apidrivendevelopment/generated</output>
+                            <groupId>generated-api</groupId>
+                            <artifactId>generated-api-id</artifactId>
                             <generateSupportingFiles>false</generateSupportingFiles>
-                            <apiPackage>com.rilind.apidrivendevelopment.api</apiPackage>
-                            <modelPackage>com.rilind.apidrivendevelopment.models</modelPackage>
-                            <invokerPackage>com.rilind.apidrivendevelopment.api.client</invokerPackage>
+                            <apiPackage>api</apiPackage>
+                            <modelPackage>models</modelPackage>
+                            <invokerPackage>client</invokerPackage>
                             <modelNameSuffix>Dto</modelNameSuffix>
                             <configOptions>
                                 <interfaceOnly>true</interfaceOnly>

@@ -91,6 +91,24 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Vehicle"
+    put:
+      summary: Update Vehicle.
+      operationId: updateVehicle
+      tags:
+        - "Vehicle"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Vehicle"
+      responses:
+        '201':
+          description: Returns created Vehicle.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Vehicle"
 components:
 
   schemas:

@@ -1,12 +1,12 @@
 package com.rilind.apidrivendevelopment.controllers;
 
-import com.rilind.apidrivendevelopment.api.LibraryApi;
-import com.rilind.apidrivendevelopment.models.BookDto;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
 
+import api.LibraryApi;
+import models.BookDto;
 import java.util.ArrayList;
 import java.util.List;
 

@@ -1,8 +1,8 @@
 package com.rilind.apidrivendevelopment.controllers;
 
 
-import com.rilind.apidrivendevelopment.api.VehicleApi;
-import com.rilind.apidrivendevelopment.models.VehicleDto;
+import api.VehicleApi;
+import models.VehicleDto;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
@@ -43,6 +43,12 @@ public class VehicleController implements VehicleApi {
     @Override
     public ResponseEntity<VehicleDto> getSingleVehicle() {
         LOGGER.info("Returning a single vehicle - endpoint");
+        return ResponseEntity.ok(getVehicles().get(0));
+    }
+
+    @Override
+    public ResponseEntity<VehicleDto> updateVehicle(VehicleDto body) {
+        LOGGER.info("Updating the vehicle - endpoint");
         return ResponseEntity.ok(getVehicles().get(0));
     }
 }
